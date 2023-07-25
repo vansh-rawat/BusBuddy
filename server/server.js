@@ -16,6 +16,7 @@ app.use('/api/buses', busesRoute);
 app.use('/api/bookings', bookingsRoute);
 
 const path = require("path");
+__dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
